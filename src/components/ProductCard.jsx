@@ -11,14 +11,14 @@ function ProductCard({ product, inCart }) {
             <p className="font-bold text-lg flex-grow overflow-hidden line-clamp-3 mt-5">{product.description}</p>
             <p className="text-base text-gray-600  mt-3">${product.price}</p>
             {inCart ? (
-                <div className="flex justify-center">
+                <div className="flex justify-center mt-4">
                     <button onClick={() => removeFromCart(product.id)}
                         className="rounded-lg text-bg-600 text-white w-40 py-2 transition">
                         Remove From Cart
                     </button>
                 </div>
 
-            ) : (<div className="flex justify-center mt-30">
+            ) : (<div className="flex justify-center mt-4">
                 <button onClick={() => addToCart(product)}
                     className="rounded-lg bg-blue-500 text-white w-40 py-2 transition">
                     Add To Cart
